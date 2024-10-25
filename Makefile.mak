@@ -4,7 +4,8 @@ PORT=5000
 .PHONY: init run test build clean
 
 init:
-    pip install -r requirements.txt
+    cd Project
+    make init
 
 run:
     python app.py
