@@ -3,6 +3,10 @@ from health_utils import calculate_bmi, calculate_bmr
 
 app = Flask(__name__)
 
+@app.route('/')
+def home():
+    return "HealtApp Welcome Page !"
+
 @app.route('/bmi', methods=['POST'])
 def bmi():
     data = request.json
