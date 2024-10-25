@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "HealtApp Welcome Page !"
+    return " Vous êtes arrivez sur ma page Web  !"
 
 @app.route('/bmi', methods=['POST'])
 def bmi():
