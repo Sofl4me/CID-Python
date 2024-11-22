@@ -46,48 +46,62 @@ Ce projet consiste à développer un microservice Python utilisant Flask pour ca
 ```bash
 git clone https://github.com/Sofl4me/CID-Python.git
 cd CID-Python
-
-Étape 2 : Installer les dépendances
-bash
+```
+---
+### Étape 2 : Installer les dépendances
+```bash
 Copier le code
 make init
-Étape 3 : Lancer le service
-bash
+```
+---
+### Étape 3 : Lancer le service
+```bash
 Copier le code
 make run
-Étape 4 : Exécuter les tests
-bash
+```
+---
+### Étape 4 : Exécuter les tests
+```bash
 Copier le code
 make test
-Étape 5 : Construire l'image Docker
-bash
+```
+---
+### Étape 5 : Construire l'image Docker
+```bash
 Copier le code
 make build
-Étape 6 : Déployer sur Azure
+```
+---
+### Étape 6 : Déployer sur Azure
 Configurez le fichier de workflow GitHub Actions et ajoutez le secret AZURE_WEBAPP_PUBLISH_PROFILE dans les paramètres de votre dépôt.
+---
+### Structure du projet
+```
+CID-Python/
+├── app.py                # Application principale Flask avec les endpoints REST (BMI et BMR)
+├── health_utils.py       # Fonctions utilitaires pour les calculs de BMI et BMR
+├── test.py               # Tests unitaires pour valider les calculs et les endpoints
+├── Dockerfile            # Fichier Docker pour conteneuriser l'application
+├── Makefile              # Automatisation des tâches (installation, test, exécution, build)
+├── requirements.txt      # Liste des dépendances Python nécessaires
+├── .github/
+│   └── workflows/
+│       └── ci-cd.yml     # Workflow GitHub Actions pour la CI/CD
+└── README.md             # Documentation du projet
+```
 
-Structure du projet
-app.py : Contient les endpoints Flask pour calculer le BMI et le BMR.
-health_utils.py : Fonctions utilitaires pour le calcul des métriques.
-Dockerfile : Définit l'image Docker pour le microservice.
-Makefile : Automatisation des tâches.
-requirements.txt : Gestion des dépendances Python.
-test.py : Tests unitaires pour les fonctions BMI et BMR.
-.github/workflows/ci-cd.yml : Pipeline CI/CD pour les tests et le déploiement.
-Tests
+### Tests
 Les tests sont écrits en Python avec unittest. Ils valident la précision des calculs BMI et BMR.
 
 Exemple :
 
-bash
-Copier le code
+```bash
 python -m unittest discover
-Évaluation
-Exactitude : Vérification des calculs de BMI et BMR.
-Conteneurisation : Exécution correcte de l'application dans un conteneur Docker.
-Automatisation : Fonctionnement des commandes Makefile pour toutes les étapes.
-CI/CD : Pipeline GitHub Actions déployant l'application avec succès.
-Documentation : Code et commentaires clairs et bien organisés.
-Contributeurs
+```
+```bash
+http://localhost:5000/
+```
+
+---
 Ce projet a été développé par Sofl4me dans le cadre d'un exercice d'intégration de microservices Python avec CI/CD.
 
