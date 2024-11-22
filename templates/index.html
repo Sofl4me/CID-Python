@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Calculator API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #333;
+        }
+        header {
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #0078D7;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+        .endpoints {
+            margin-top: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: #0078D7;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur l'API Health Calculator</h1>
+        <p>Utilisez les endpoints suivants pour calculer des indices de santé :</p>
+    </header>
+    <div class="endpoints">
+        <ul>
+            <li><a href="/bmi" target="_blank">/bmi</a> - Calculer l'IMC (Body Mass Index)</li>
+            <li><a href="/bmr" target="_blank">/bmr</a> - Calculer le BMR (Basal Metabolic Rate)</li>
+        </ul>
+    </div>
+</body>
+</html>
