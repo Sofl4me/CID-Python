@@ -49,26 +49,26 @@ cd CID-Python
 ```
 ---
 ### Étape 2 : Installer les dépendances
-```bash
 Copier le code
+```bash
 make init
 ```
 ---
 ### Étape 3 : Lancer le service
-```bash
 Copier le code
+```bash
 make run
 ```
 ---
 ### Étape 4 : Exécuter les tests
-```bash
 Copier le code
+```bash
 make test
 ```
 ---
 ### Étape 5 : Construire l'image Docker
-```bash
 Copier le code
+```bash
 make build
 ```
 ---
