@@ -4,14 +4,13 @@ PORT=5000
 .PHONY: init run test build clean
 
 init:
-    cd Project
-    make init
+	pip install -r requirements.txt
 
 run:
-    python app.py
+	python3 app.py
 
 test:
-    python -m unittest discover
+	python -m unittest discover
 
 build:
-    docker build -t $(IMAGE_NAME) .
+	docker build -t $(IMAGE_NAME) .
